@@ -1,0 +1,249 @@
+<html>
+<head>
+<style>
+   h1 {  color: rgb(138, 11, 11);
+    text-align: center;
+    font-size:100px;
+   animation-name: anim;
+   animation-duration: 5s;
+   animation-iteration-count: infinite;
+   }
+ body{
+   background-color: beige;
+
+   }
+   p{
+       text-align: justify;
+       text-indent: 14px;
+       font-size: 30px;
+       color: rgb(3, 2, 0);
+       word-spacing: 4px;
+       line-height: 40px;
+       margin-left: 50px;   margin-right: 50px;
+   }
+   p{
+       text-align: justify;
+       text-indent: 4px;
+       font-size: 30px;
+       color: rgb(119, 32, 6);
+       word-spacing: 4px;
+       line-height: 40px;
+        margin-top:  -30px;
+   }
+
+   @keyframes anim {
+   50%{color: rgb(248, 3, 97);}
+   
+    100%{color: rgb(243, 5, 231);}
+   }
+   img {
+          width: 600px;
+          height: 470px;
+          border-color: rgb(4, 4, 53);  border-width: 70px;
+          border-radius: 10px;
+          margin-left: 400px; margin-top: 50px;
+   }
+    img:hover{     width: 550px;
+                  height: 550px;
+
+
+    }
+
+    #menu {
+	background: #0099CC;
+	background: linear-gradient(to bottom,  #2365f3,  #f50d0d);
+	height: 60px;  padding-top: 20px;  margin-top: 60px;
+	padding-left: 18px;
+	border-radius: 19px;
+	border: 1px solid #2c0404;
+}
+#menu ul, #menu li {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none
+}
+#menu ul {
+	width: 100%;
+	text-align: left;
+}
+#menu li {
+	display: inline-block;
+	position: relative;
+}
+#menu a {
+	display: block;
+	line-height: 51px;
+	padding: 0px 30px;  padding-bottom: -200px;
+	text-decoration: none;
+	color: #f7fbfc;
+	font-size: 22px;
+}
+#menu a.dropdown-arrow:after {
+	content: "\25BE";
+	margin-left: 5px;
+}
+#menu li a:hover {
+	color: #ebc20b;
+	background color: blue;
+}
+#menu input {
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 20px;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer
+}
+#menu label {
+	display: none;
+	line-height: 20px;
+	text-align: center;
+	position: absolute;
+	left: 400px
+}
+#menu label:before {
+	font-size: 1.6em;
+	color: #FFFFFF;
+	content: "\2261"; 
+	margin-left: 20px;
+}
+#menu ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 200px; 
+	background: #f11f1f;
+	position: absolute;
+	z-index: 99;
+	display: none;
+}
+#menu ul.sub-menus li {
+	display: block;
+	text-align: left;
+	width: 100%;
+}
+#menu ul.sub-menus a {
+	color:white
+	font-size : 40px;
+	line-height: 33px;
+}
+#menu li:hover ul.sub-menus {
+	display: block
+}
+#menu ul.sub-menus a:hover{
+	background: white;
+	color: #0c3502;
+	
+}
+@media screen and (max-width: 800px){
+	#menu {position:relative}
+	#menu ul {background:#444444;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none;text-align:left;}
+	#menu ul.sub-menus {width:100%;position:static;}
+	#menu ul.sub-menus a {padding-left:30px;}
+	#menu li {display:block;float:none;width:auto;}
+	#menu input, #menu label {position:absolute;top:0;left:0;display:block}
+	#menu input {z-index:5}
+	#menu input:checked + label {color:#FFFFFF}
+	#menu input:checked + label:before {content:"\00d7"}
+	#menu input:checked ~ ul {display:block}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+
+
+
+
+
+
+    <body>
+        <nav id='menu'>
+            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+            <ul>
+              <li><a  class='dropdown-arrow' href='http://'>About Java</a>
+                <ul class='sub-menus'>
+                    <li><a href='history of java.html'>History </a></li>
+                    <li><a href='features.html'>Features </a></li>
+                    <li><a href='http://'>Hello program</a></li>
+                    <li><a href='http://'>Variables</a></li>
+                    <li><a href='http://'>Operator</a></li>
+                    <li><a href='http://'>Data type</a></li>
+                    
+                  </ul>
+                </li>
+              <li><a class='dropdown-arrow' href='http://'>Object & Classes</a>
+               
+                 <ul class='sub-menus'>
+                  <li><a href='oops.html'>OOPS concept</a></li>
+                  <li><a href='class.html'>Classes</a></li>
+                  <li><a href='http://'>Object</a></li>
+                  <li><a href='http://'>Method</a></li>
+                  <li><a href='http://'>Constructor</a></li>
+                  <li><a href='http://'>Keywords</a></li>
+                </ul>
+              </li>
+              <li><a class='dropdown-arrow' href='inheritance.html'>Inheritance</a>
+                <ul class='sub-menus'>
+                    <li><a href='inher.html'>Inheritance(IS)</a></li>
+                    <li><a href='http://'>Aggregation(HAS)</a></li>
+                    
+                  </ul>
+                </li>
+              <li><a class='dropdown-arrow' href='http://'>Polymorphism</a>
+                <ul class='sub-menus'>
+                  <li><a href='overloading.html'>Overloading</a></li>
+                  <li><a href='http://'>Overriding</a></li>
+                    <li><a  href='http://'>super keyword</a></li>
+                        <li><a  href='http://'>final keyword</a> </li>
+                            <li><a  href='polymorphism.html'>Runtime polymorphism</a> </li>
+                                <li><a  href='http://'>Dynamic binding</a></li> </ul>
+                        </li>
+                        <li><a class='dropdown-arrow' href='http://'>Abstraction</a>
+                        <ul class='sub-menus'>
+                          <li><a href='http://'>Abstract class</a></li>
+                          <li><a href='interface.html'>Interface</a></li>
+                         
+                        </ul>
+                    </li>
+                    <li><a class='dropdown-arrow' href='http://'>Encapsulation</a>
+                        <ul class='sub-menus'>
+                          <li><a href='http://'>Package</a></li>
+                          <li><a href='access.html'>Access Modifier</a></li>
+                          <li><a href='incapsul.html'>Encapsulation</a></li>
+                          
+                        </ul>
+                    </li>
+            </ul>
+          </nav><br>
+
+        <h1>Inheritance Concepts</h1>
+        <p>
+            Inheritance in Java is a mechanism in which one object acquires all the properties and behaviors of a parent object. It is an important part of OOPs (Object Oriented programming system).
+
+The idea behind inheritance in Java is that you can create new classes that are built upon existing classes. When you inherit from an existing class, you can reuse methods and fields of the parent class. Moreover, you can add new methods and fields in your current class also.<br><br>
+
+Inheritance represents the IS-A relationship which is also known as a parent-child relationship.
+
+        </p><br>
+    <img src="inh.jpg"><br><br><br><br>
+    <p>                                        
+        The principles for creating Java programming were "Simple, Robust, Portable, Platform-independent, Secured, High Performance, Multithreaded, Architecture Neutral, Object-Oriented, Interpreted, and Dynamic". Java was developed by James Gosling, who is known as the father of Java, in 1995. James Gosling and his team members started the project in the early '90s.<br><br>
+
+James Gosling - founder of java
+Currently, Java is used in internet programming, mobile devices, games, e-business solutions, etc. Following are given significant points that describe the history of Java.
+    </p>
+    
+    </body>
+</html>

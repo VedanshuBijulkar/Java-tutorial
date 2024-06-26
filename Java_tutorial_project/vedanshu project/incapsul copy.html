@@ -1,0 +1,230 @@
+<html>
+<head>
+<style>
+   h1 {  color: rgb(219, 195, 195);
+    text-align: center;
+    font-size:100px;
+    text-decoration-line: dotted;
+  text-decoration-color: rgb(5, 5, 116);
+  border-style: solid;
+  border-radius: 50px;
+  border-color: rgb(25, 7, 104);
+  border-width: 10px;
+  text-transform: uppercase;
+  animation-name: anim;
+animation-duration: 1s;
+   }
+ body{
+   background-image: url(incapsul.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+   }
+   p{
+       text-align: justify;
+       text-indent: 140px;
+       font-size: 40px;
+       color: antiquewhite;
+       word-spacing: 4px;
+       line-height: 50px;
+   }
+
+   @keyframes anim {
+   50%{font-size: 80px;}
+   
+    100%{font-size: 100;}
+   }
+   
+   #menu {
+	background: #0099CC;
+	background: linear-gradient(to bottom,  #2365f3,  #f50d0d);
+	height: 60px;  padding-top: 20px;  margin-top: 60px;
+	padding-left: 18px;
+	border-radius: 19px;
+	border: 1px solid #2c0404;
+}
+#menu ul, #menu li {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none
+}
+#menu ul {
+	width: 100%;
+	text-align: left;
+}
+#menu li {
+	display: inline-block;
+	position: relative;
+}
+#menu a {
+	display: block;
+	line-height: 51px;
+	padding: 0px 30px;  padding-bottom: -200px;
+	text-decoration: none;
+	color: #f7fbfc;
+	font-size: 22px;
+}
+#menu a.dropdown-arrow:after {
+	content: "\25BE";
+	margin-left: 5px;
+}
+#menu li a:hover {
+	color: #ebc20b;
+	background color: blue;
+}
+#menu input {
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 20px;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer
+}
+#menu label {
+	display: none;
+	line-height: 20px;
+	text-align: center;
+	position: absolute;
+	left: 400px
+}
+#menu label:before {
+	font-size: 1.6em;
+	color: #FFFFFF;
+	content: "\2261"; 
+	margin-left: 20px;
+}
+#menu ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 200px; 
+	background: #f11f1f;
+	position: absolute;
+	z-index: 99;
+	display: none;
+}
+#menu ul.sub-menus li {
+	display: block;
+	text-align: left;
+	width: 100%;
+}
+#menu ul.sub-menus a {
+	color:white
+	font-size : 40px;
+	line-height: 33px;
+}
+#menu li:hover ul.sub-menus {
+	display: block
+}
+#menu ul.sub-menus a:hover{
+	background: white;
+	color: #0c3502;
+	
+}
+@media screen and (max-width: 800px){
+	#menu {position:relative}
+	#menu ul {background:#444444;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none;text-align:left;}
+	#menu ul.sub-menus {width:100%;position:static;}
+	#menu ul.sub-menus a {padding-left:30px;}
+	#menu li {display:block;float:none;width:auto;}
+	#menu input, #menu label {position:absolute;top:0;left:0;display:block}
+	#menu input {z-index:5}
+	#menu input:checked + label {color:#FFFFFF}
+	#menu input:checked + label:before {content:"\00d7"}
+	#menu input:checked ~ ul {display:block}
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+
+
+
+
+
+
+    <body>
+      <nav id='menu'>
+            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+            <ul>
+              <li><a  class='dropdown-arrow' href='http://'>About Java</a>
+                <ul class='sub-menus'>
+                    <li><a href='history of java.html'>History </a></li>
+                    <li><a href='features.html'>Features </a></li>
+                    <li><a href='http://'>Hello program</a></li>
+                    <li><a href='http://'>Variables</a></li>
+                    <li><a href='http://'>Operator</a></li>
+                    <li><a href='http://'>Data type</a></li>
+                    
+                  </ul>
+                </li>
+              <li><a class='dropdown-arrow' href='http://'>Object & Classes</a>
+               
+                 <ul class='sub-menus'>
+                  <li><a href='oops.html'>OOPS concept</a></li>
+                  <li><a href='class.html'>Classes</a></li>
+                  <li><a href='http://'>Object</a></li>
+                  <li><a href='http://'>Method</a></li>
+                  <li><a href='http://'>Constructor</a></li>
+                  <li><a href='http://'>Keywords</a></li>
+                </ul>
+              </li>
+              <li><a class='dropdown-arrow' href='inheritance.html'>Inheritance</a>
+                <ul class='sub-menus'>
+                    <li><a href='inher.html'>Inheritance(IS)</a></li>
+                    <li><a href='http://'>Aggregation(HAS)</a></li>
+                    
+                  </ul>
+                </li>
+              <li><a class='dropdown-arrow' href='http://'>Polymorphism</a>
+                <ul class='sub-menus'>
+                  <li><a href='overloading.html'>Overloading</a></li>
+                  <li><a href='http://'>Overriding</a></li>
+                    <li><a  href='http://'>super keyword</a></li>
+                        <li><a  href='http://'>final keyword</a> </li>
+                            <li><a  href='polymorphism.html'>Runtime polymorphism</a> </li>
+                                <li><a  href='http://'>Dynamic binding</a></li> </ul>
+                        </li>
+                        <li><a class='dropdown-arrow' href='http://'>Abstraction</a>
+                        <ul class='sub-menus'>
+                          <li><a href='http://'>Abstract class</a></li>
+                          <li><a href='interface.html'>Interface</a></li>
+                         
+                        </ul>
+                    </li>
+                    <li><a class='dropdown-arrow' href='http://'>Encapsulation</a>
+                        <ul class='sub-menus'>
+                          <li><a href='http://'>Package</a></li>
+                          <li><a href='access.html'>Access Modifier</a></li>
+                          <li><a href='incapsul.html'>Encapsulation</a></li>
+                          
+                        </ul>
+                    </li>
+            </ul>
+          </nav><br>
+
+        <h1>incapsulation</h1>
+        <p>An essential part of the Java language is the class, which contains objects with similar properties and specifies their data and behavior. It provides structure and efficiency for Java developers and serves as the blueprint for building objects. Abstraction in Java is an important aspect of object-oriented programming, where an object is an abstract concept in Java; it has no physical representation like variables or other types of data but instead acts as a template for entities being modeled within a program.
+
+            Java classes provide the framework for building models incorporating essential concepts like inheritance in Java, polymorphism in Java, abstraction, & encapsulation. They act as the design manual for the construction of objects, making Java development essential.
+            
+            
+            
+
+
+        </p>
+    </body>
+</html>

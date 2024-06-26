@@ -1,0 +1,85 @@
+<html>
+
+<head>
+
+
+
+<style>
+
+
+
+body{  
+    background-image:url('java1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+h1{  background-color: aliceblue;
+    color: darkred;
+    border-style: solid;
+    border-color:rgb(20, 2, 2);
+    border-width: 5px;
+    padding-left: 350px;
+    font-size: 100px;
+    text-transform: uppercase;
+animation-name: anim;
+animation-duration: 5s;
+animation-iteration-count: 50;
+
+
+}
+a{  font-size: 70px;
+   color: rgb(203, 240, 232);
+   background-color: rgb(2, 46, 2);
+   border-style: solid;
+   border-color: black;
+   border-radius: 40px;
+   text-decoration-line: none;
+   text-transform: capitalize;
+   text-align: center;
+   
+   
+}
+a:hover {
+    background-color: aliceblue;
+       color: rgb(248, 3, 3);
+}
+
+@keyframes anim{
+   40%{color: red;}
+   60% {color: blue;}
+    100%{color: rgb(51, 184, 7);}
+   
+    
+}
+
+
+img{
+    margin-left: 120px;
+    margin-top:-641px;
+    width: 90px;
+    height: 90px;
+    border-style:solid;
+    border-color: rgb(22, 17, 11);
+   border-radius: 360px;
+   border-width: 5px;
+   background-color: darkkhaki;
+}
+img:hover{
+    width: 200px;
+    height: 200px;
+}
+
+</style>
+</head>
+<body>
+    
+<h1>Learning Java</h1>
+
+<a href="class.html">class</a><br><br><br>
+<a href="inheritance.html">inheritance</a><br><br><br>
+<a href="polymorphism.html">polymorphism</a><br><br><br>
+<a href="incapsul.html">incapsulation</a><br><br><br>
+<img src="javalogo.png">
+</body>
+</html>
